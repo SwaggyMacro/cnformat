@@ -1,37 +1,38 @@
 {
   "name": "swaggymacro/cnformat",
-  "description": "A extension for flarum to format link of Chinese site.",
+  "description": "A extension for flarum to format the Chinese site as a embed.",
   "keywords": [
     "flarum"
   ],
   "type": "flarum-extension",
   "license": "MIT",
   "require": {
-    "flarum/core": "^1.2"
+    "flarum/core": "^1.0.0",
+    "s9e/text-formatter" : "^2.0.0"
   },
   "authors": [
     {
-      "name": "Swaggy Macro",
+      "name": "SwaggyMacro",
       "email": "macro@julym.com",
       "role": "Developer"
     }
   ],
   "autoload": {
     "psr-4": {
-      "swaggymacro\\cnformat\\": "src/"
+      "SwaggyMacro\\CNFormat\\": "src/"
     }
   },
   "extra": {
     "flarum-extension": {
-      "title": "CN Format",
+      "title": "CNFormat",
       "icon": {
-        "name": "fas fa-play",
-        "backgroundColor": "#fd4c5b",
-        "color": "#FFFFFF"
+        "name": "",
+        "backgroundColor": "",
+        "color": ""
       }
     },
     "flagrow": {
-      "discuss": "#"
+      "discuss": ""
     }
   }
 }
