@@ -11,7 +11,7 @@ return [
              $config->MediaEmbed->add(
                 'bilibili',
                 [
-                    'host'    => ['www.bilibili.com',],
+                    'host'    => ['bilibili.com',],
                     'extract' => [
                         "!www\.bilibili\.com/video/(BV(?'bvid'[-0-9A-Z_a-z]+))(\?p=(?'pn'[-0-9]+))?!"
                     ],
