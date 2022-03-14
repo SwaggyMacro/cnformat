@@ -146,5 +146,17 @@ return [
                     ]
                 ]
         );
+        $config->MediaEmbed->add(
+                'missevan',
+                [
+                    'host'    => ['missevan.com','www.missevan.com'],
+                    'extract' => "!missevan\\.com/sound/player\\?id=(?'sid'\d+)!",
+                    'iframe'  => [
+                        'width'  => 760,
+                        'height' => 100,
+                        'src'    => '//www.missevan.com/soundiframe/{@sid}?type=small'
+                    ]
+                ]
+        );
     })
 ];
