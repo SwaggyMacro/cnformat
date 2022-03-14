@@ -14,6 +14,8 @@ namespace SwaggyMacro\CNFormat;
 use Flarum\Extend;
 use s9e\TextFormatter\Configurator;
 
+
+
 return [ 
   (new Extend\Frontend('forum'))
   ->css(__DIR__.'/less/forum.less'),
@@ -71,7 +73,6 @@ return [
                     ],
                     'iframe'  => [
                         'width'  => 760,
-                        'height' => 450,
                         'src'    => '//h5.video.weibo.com/show/{@fid}'
                     ]
                 ]
@@ -81,12 +82,13 @@ return [
                 [
                     'host'    => ['weibo.com','m.weibo.cn',],
                     'extract' => [
-                        "!m\\.weibo\\.cn/status/(?'postid'\d+)!",
+                        "!m\\.weibo\\.cn/[\s\S]*/(?'postid'\d+)!",
                         "!weibo\\.com/[\s\S]*/(?'postid'[\s\S])*!",
                     ],
                     'iframe'  => [
                         'width'  => 760,
-                        'height' => 450,
+                        'height' => 760,
+                        'scrolling' => 'yes',
                         'src'    => '//m.weibo.cn/status/{@postid}'
                     ]
                 ]
