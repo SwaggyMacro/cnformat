@@ -158,5 +158,17 @@ return [
                     ]
                 ]
         );
+        $config->MediaEmbed->add(
+                'youku',
+                [
+                    'host'    => ['youku.com','v.youku.com'],
+                    'extract' => "!v\\.youku\\.com/v_show/id_(?'yid'[\s\S]*)\\.html!",
+                    'iframe'  => [
+                        'width'  => 510,
+                        'height' => 498,
+                        'src'    => '//player.youku.com/embed/(@{yid})'
+                    ]
+                ]
+        );
     })
 ];
