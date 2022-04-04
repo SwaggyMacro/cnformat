@@ -33,7 +33,6 @@ return [
            </iframe>
          </div>'
         );
-	$config->HTMLElements->allowElement('u');
         $config->MediaEmbed->add(
 				'bilibili',
 				[
